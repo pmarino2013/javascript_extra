@@ -1,3 +1,11 @@
+class Producto {
+  constructor(nombre, precio, marca) {
+    this.nombre = nombre;
+    this.precio = precio;
+    this.marca = marca;
+  }
+}
+
 let superheroe = {
   alias: "Batman",
   nombre: "Bruce Wayne",
@@ -28,4 +36,4 @@ const usuario = {
   },
 };
 
-export { usuario, superheroe };
+export { usuario, superheroe, Producto };

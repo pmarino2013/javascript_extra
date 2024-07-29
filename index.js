@@ -1,9 +1,15 @@
 // import { nombre, bienVenida } from "./export/helper.js";
 // import { superheroe, usuario } from "./export/datos.js";
 
-import { nombre, bienVenida, superheroe, usuario } from "./export/index.js";
+import {
+  nombre,
+  bienVenida,
+  superheroe,
+  usuario,
+  crearProducto,
+} from "./export/index.js";
 import activePromise from "./promesas/promesa.js";
-import { traerData } from "./promesas/fetch.js";
+// import { traerData } from "./promesas/fetch.js";
 import { traerDataAsync } from "./promesas/async.js";
 
 activePromise()
@@ -74,3 +80,6 @@ console.log(isActive ? "Activado" : "No está activado");
 let tenerSed = false;
 
 console.log(tenerSed && "Tomar agua");
+
+let mouse = crearProducto("Mouse", 500, "Logitech");
+console.log(mouse);
