@@ -25,13 +25,17 @@ bienVenida(nombre);
 
 console.log("Hola mundo");
 
-//Desestructuración
+//Desestructuración--------------------------------------------------
 let ejemplo = ["Hola alumnos!", (mensaje) => console.log(mensaje), 34];
-
 const [mensaje, saludar, num] = ejemplo;
 console.log(num);
 saludar(mensaje);
 
+// let superheroe = {
+//   alias: "Batman",
+//   nombre: "Bruce Wayne",
+//   habilidad: "resolver problemas y misterios",
+// };
 const { alias, habilidad } = superheroe;
 console.log(`${alias} es reconocido por ${habilidad}`);
 
@@ -67,14 +71,40 @@ const {
 } = usuario;
 console.log(lat, lng);
 
-//operador ternario
+//Spread Operator----------------------------------
+let num1 = [23, 56, 3, 67];
+let num2 = [100, 456, 2, 347];
+
+Math.max(...num1, ...num2); //23,56,3,67,100,456,2,347
+
+const [uno, dos, ...resto] = num1;
+uno;
+dos;
+resto;
+
+const myVehicle = {
+  brand: "Ford",
+  model: "Mustang",
+  color: "red",
+};
+
+const updateMyVehicle = {
+  type: "car",
+  year: 2021,
+  color: "yellow",
+};
+
+const { brand, ...caracteristicas } = myVehicle;
+let myUpdateVehicle = { ...myVehicle, ...updateMyVehicle };
+myUpdateVehicle;
+
+//operador ternario-----------------------------
 let isActive = false;
 // if (isActive) {
 //   console.log("Activado");
 // } else {
 //   console.warn("No está activado");
 // }
-
 console.log(isActive ? "Activado" : "No está activado");
 
 let tenerSed = false;
